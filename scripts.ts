@@ -4,6 +4,14 @@ const prisma = new PrismaClient()
 // USER TABLE AUTOMATICALLY GENERATED FROM MODAL USER
 
 async function main() {
+    // FIND FIRST
+const user = await prisma.user.findFirst({
+    where: {
+        name: "perimma",
+    },
+})
+console.log(user);
+
 //   const user = await prisma.user.create({ data: { name: "Chandrasekar" }})
 //     const users = await prisma.user.deleteMany()
 //     console.log(users); 
@@ -43,13 +51,16 @@ async function main() {
 
 
     // UNIQUE BOTH  NAME
-    const user = await prisma.user.findFirst({
-        where: {
-            name: "Danam",
-        },
-    })
-    console.log(user);
+    // const user = await prisma.user.findFirst({
+    //     where: {
+    //         name: "Danam",
+    //     },
+    // })
+    // console.log(user);
 
+
+
+    
 }
 
 main()
