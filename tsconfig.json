@@ -1,4 +1,5 @@
 //  Typescript configuration dependencies
+//
 {
     "compilerOptions": {
      "sourceMap": true,
