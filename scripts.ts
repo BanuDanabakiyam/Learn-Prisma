@@ -3,20 +3,40 @@ const prisma = new PrismaClient()
 
 // USER TABLE AUTOMATICALLY GENERATED FROM MODAL USER
 
+
+// *****************************************************************************//
+// CREATE MANY
+
 async function main() {
-    // FIND FIRST
-const user = await prisma.user.findFirst({
-    where: {
-        name: "perimma",
-    },
+await prisma.user.createMany({
+    data: [
+        {
+            name: "saras",
+            email: "banu3@gmail.com",
+            age: 22,
+        },
+    ],
 })
-console.log(user);
+
+
+// ****************************************************************************** //    
+    // FIND FIRST
+// const user = await prisma.user.findFirst({
+//     where: {
+//         name: "perimma",
+//     },
+// })
+// console.log(user);
+
+//  ******************************************************************************//
 
 //   const user = await prisma.user.create({ data: { name: "Chandrasekar" }})
 //     const users = await prisma.user.deleteMany()
 //     console.log(users); 
 // await prisma.user.deleteMany(); // avoid to repeated data
-      // ********* Data Reading **********//
+
+// **************************************************************************//
+    // Data Reading:
     //   const user = await prisma.user.createMany({ 
     //      data: [{
     //         name: "Dinesh",
@@ -30,6 +50,8 @@ console.log(user);
     //      })
     //    console.log(user);
 
+ // ******************************************************************//   
+
     // const user = await prisma.user.create({
     //     data: {
     //         name: "Sekar",
@@ -39,13 +61,17 @@ console.log(user);
     // })
     // console.log(user);
 
-    // **************** UNIQUE KEYS ***********************
+// ********************************************************************//    
+
+    // UNIQUE KEYS 
     // const user = await prisma.user.findUnique({
     //     where: {
     //         email: "12345@gmail.com",
     //     },
     // })
     // console.log(user);
+
+// **********************************************************************************
 
     
 
@@ -57,6 +83,8 @@ console.log(user);
     //     },
     // })
     // console.log(user);
+
+// ****************************************************************************//    
 
 
 
